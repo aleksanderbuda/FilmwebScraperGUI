@@ -1,2 +1,1 @@
-# FilmwebScraperGUI
-FilmwebScraperGUI
+IMDBScraper
