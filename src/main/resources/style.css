@@ -1,0 +1,88 @@
+@font-face {
+font-family: "Roboto Black";
+src: url("/fonts/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face {
+font-family: "Roboto Thin";
+src: url("/fonts/Roboto-Thin.ttf") format("truetype");
+}
+
+@font-face {
+font-family: "Helvetica";
+src: url("/fonts/Helvetica.ttf") format("truetype");
+}
+
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 15;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-font-family: "Helvetica";
+    -fx-padding: 0 10 0 0;
+}
+
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 12px;
+    -fx-font-family: "Helvetica";
+    -fx-pref-width: 200px;
+}
+
+.text-field.narrow {
+    -fx-pref-width: 100px;
+    -fx-max-width: 100px;
+}
+
+.combo-box {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 12px;
+    -fx-font-family: "Helvetica";
+    -fx-pref-width: 200px;
+}
+
+.combo-box .cell {
+    -fx-font-size: 12px;
+    -fx-font-family: "Helvetica";
+}
+
+.combo-box .button-cell {
+    -fx-font-size: 12px;
+    -fx-font-family: "Helvetica";
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #fff;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-family: "Helvetica";
+}
+
+.button.exit-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: #fff;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-font-family: "Helvetica";
+}
+
+.button.exit-button:hover {
+    -fx-background-color: #c82333;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
