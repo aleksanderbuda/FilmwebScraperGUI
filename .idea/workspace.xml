@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/FontTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/IMDBScraperApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/constants/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/IMDBScraperView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceldata/ExcelFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/IMDBScraper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/setup/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/setup/WebDriverSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/IMDBScraperView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Helvetica.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Roboto-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="structure outline">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/FontTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +58,7 @@
     "Application.IMDBScraperApp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/javafx-sdk-22.0.2/lib",
@@ -132,6 +123,19 @@
       <option name="presentableId" value="Default" />
       <updated>1725349377688</updated>
     </task>
+    <task id="LOCAL-00001" summary="structure outline">
+      <option name="closed" value="true" />
+      <created>1725364118178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725364118178</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="structure outline" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure outline" />
   </component>
 </project>
