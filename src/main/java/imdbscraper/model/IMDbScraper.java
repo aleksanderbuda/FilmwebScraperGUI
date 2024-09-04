@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imdbscraper.setup.SearchPage;
-import imdbscraper.setup.WebDriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,8 +13,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 public class IMDbScraper {
 
-    public List<Movie> performSearch(String title, String releaseDateFrom, String releaseDateTo, String genre) {
-        WebDriver driver = WebDriverSetup.getDriver();
+    public List<Movie> performSearch(WebDriver driver, String title, String releaseDateFrom, String releaseDateTo, String genre) {
         SearchPage searchPage = new SearchPage(driver);
         String url = "https://www.imdb.com/search/title/";
 
@@ -46,8 +44,6 @@ public class IMDbScraper {
         } catch (Exception e) {
             e.printStackTrace();
             return new ArrayList<>();
-        } finally {
-            WebDriverSetup.quitDriver();
         }
     }
 

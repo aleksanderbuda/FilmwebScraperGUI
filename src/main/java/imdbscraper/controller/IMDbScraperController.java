@@ -1,9 +1,11 @@
 package imdbscraper.controller;
 
 import imdbscraper.model.Movie;
+import imdbscraper.setup.WebDriverSetup;
 import imdbscraper.view.IMDbScraperView;
 import imdbscraper.model.IMDbScraper;
 import javafx.stage.Stage;
+import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
@@ -42,12 +44,21 @@ public class IMDbScraperController {
             String releaseDateTo = view.getReleaseDateToField().getText();
             String genre = String.valueOf(view.getGenreDropdown().getValue());
 
-            List<Movie> results = model.performSearch(title, releaseDateFrom, releaseDateTo, genre);
+            WebDriver driver = WebDriverSetup.getNewDriver();
+            try {
+                IMDbScraper scraper = new IMDbScraper();
+                List<Movie> results = scraper.performSearch(driver, title, releaseDateFrom, releaseDateTo, genre);
+
+                // Process the search results
+//                processSearchResults(results);
+            } finally {
+                driver.quit();
+            }
         } catch (Exception e) {
-            System.err.println("An error occurred during the search: " + e.getMessage());
+            System.err.println("Something bad happened: " + e.getMessage());
+            e.printStackTrace();
         }
     }
-
 
     private void handleExit() {
         System.exit(0);

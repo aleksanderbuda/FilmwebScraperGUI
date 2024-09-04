@@ -2,6 +2,7 @@ package imdbscraper.setup;
 
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import org.openqa.selenium.WebDriver;
@@ -77,13 +78,14 @@ public class SearchPage {
     @FindBy(xpath = "//li[@class='ipc-tab ipc-tab--on-base ipc-tab--active']")
     private WebElement titlesButton;
 
-
     private static WebDriver driver;
     private final WebDriverWait wait;
+    private Actions actions;
 
     public SearchPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.actions = new Actions(driver);
     }
 
     public boolean isCookiesModalPresent() {
@@ -128,7 +130,7 @@ public class SearchPage {
         if (genre != null && !genre.isEmpty()) {
             WebElement genreButton = getGenreButton(genre);
             if (genreButton != null) {
-                genreButton.click();
+                actions.moveToElement(genreButton).click().perform();
             }
         }
     }

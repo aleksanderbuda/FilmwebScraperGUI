@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="encapsulation, package structure">
-      <change afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchResultPage.java" afterDir="false" />
+    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="selenium page mapping and logic for data input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDbScraperApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/constants/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/constants/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDbScraperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDbScraperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDbScraperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/WebDriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/WebDriverSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDbScraperView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,27 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1725371958223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="selenium page mapping and logic for data input">
+      <option name="closed" value="true" />
+      <created>1725451388555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725451388555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="structure outline" />
     <MESSAGE value="encapsulation, package structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="encapsulation, package structure" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java</url>
-          <line>16</line>
-          <properties class="imdbscraper.model.IMDbScraper" method="performSearch">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="selenium page mapping and logic for data input" />
+    <option name="LAST_COMMIT_MESSAGE" value="selenium page mapping and logic for data input" />
   </component>
 </project>
