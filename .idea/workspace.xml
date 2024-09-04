@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="structure outline">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="fa831c02-95e9-4c88-a5b8-1e89319741f0" name="Changes" comment="encapsulation, package structure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchResultPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/FontTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDBScraperApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/app/IMDbScraperApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/constants/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/constants/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDBScraperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/controller/IMDbScraperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDBScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/WebDriverSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/setup/WebDriverSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDBScraperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/imdbscraper/view/IMDbScraperView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +58,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App (1).executor": "Run",
+    "Application.App.executor": "Run",
     "Application.IMDBScraperApp.executor": "Run",
+    "Application.IMDbScraperApp.executor": "Run",
+    "Maven.Debug JavaFX.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/javafx-sdk-22.0.2/lib",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -70,17 +77,24 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\budaa\Desktop\project_java\FilmwebScraperGUI\src\main\resources\fonts" />
       <recent name="C:\Users\budaa\Desktop\project_java\FilmwebScraperGUI\src\main\resources" />
+      <recent name="C:\Users\budaa\Desktop\project_java\FilmwebScraperGUI\src\main\resources\fonts" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="IMDBScraperApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.IMDBScraperApp" />
-      <module name="IMDBScraperGUI" />
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="IMDbScraperGUI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="imdbscraper.app.App" />
+      <module name="IMDbScraperGUI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value="imdbscraper.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,22 +102,96 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="IMDBScraperGUI" />
+    <configuration name="IMDbScraperApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="imdbscraper.app.IMDbScraperApp" />
+      <module name="IMDbScraperGUI" />
+      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-22.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml  " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="IMDBScraperGUI" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Debug JavaFX" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="-agentlib:jdwp=transport=dt_socket,address=127.0.0.1:59346,suspend=y,server=n" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.IMDbScraperApp" />
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.App (1)" />
+      <item itemvalue="Maven.Debug JavaFX" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IMDBScraperApp" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.App (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -131,11 +219,35 @@
       <option name="project" value="LOCAL" />
       <updated>1725364118178</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="encapsulation, package structure">
+      <option name="closed" value="true" />
+      <created>1725371958223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725371958223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="structure outline" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure outline" />
+    <MESSAGE value="encapsulation, package structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="encapsulation, package structure" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/imdbscraper/model/IMDbScraper.java</url>
+          <line>16</line>
+          <properties class="imdbscraper.model.IMDbScraper" method="performSearch">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
