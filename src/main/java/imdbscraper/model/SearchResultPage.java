@@ -37,8 +37,9 @@ public class SearchResultPage {
     @FindBy(xpath = "//span[contains(@class,'sc-b189961a-8 hCbzGp')][3]")
     private WebElement contentRating;
 
-    @FindBy(xpath = "//ul[@class=\"ipc-metadata-list ipc-metadata-list--dividers-between sc-748571c8-0 jApQAb detailed-list-view ipc-metadata-list--base\"]")
-    private List<WebElement> searchResultsContainer;
+//    @FindBy(xpath = "//ul[@class=\"ipc-metadata-list ipc-metadata-list--dividers-between sc-748571c8-0 jApQAb detailed-list-view ipc-metadata-list--base\"]")
+    @FindBy(xpath = "//li[@class=\"ipc-metadata-list-summary-item\"]")
+    private List<WebElement> singleMovieContainer;
 
 //    @FindBy(className = "ipc-lockup-overlay ipc-focusable")
 //    private WebElement image;
@@ -53,7 +54,7 @@ public class SearchResultPage {
 
     public List<Movie> getMovies() {
         System.out.println("Attempting to get movies...");
-        return searchResultsContainer.stream()
+        return singleMovieContainer.stream()
                 .map(this::extractMovieData)
                 .distinct()
                 .collect(Collectors.toList());
@@ -67,8 +68,6 @@ public class SearchResultPage {
         String releaseYear = resultElement.getText();
         String movieLength = resultElement.getText();
         String contentRating = resultElement.getText();
-        System.out.println("Element HTML: " + resultElement.getAttribute("outerHTML"));
-
 
         return new Movie(title, userScore, voteCount, movieDescription, releaseYear, movieLength, contentRating);
     }
@@ -76,8 +75,8 @@ public class SearchResultPage {
     public void waitForSearchResults() {
         try {
             System.out.println("Waiting for search results to load...");
-            wait.until(ExpectedConditions.visibilityOfAllElements(searchResultsContainer));
-            System.out.println("Movies container found. Found " + searchResultsContainer.size() + " container.");
+            wait.until(ExpectedConditions.visibilityOfAllElements(singleMovieContainer));
+            System.out.println("Movies container found. Found " + singleMovieContainer.size() + " container.");
         } catch (TimeoutException e) {
             System.out.println("Timeout waiting for search results to load.");
             throw e;
@@ -85,3 +84,5 @@ public class SearchResultPage {
     }
 
 }
+//iteruje teraz 7 razy każde scrapowane dane przez title, userscore itp. czyli np na title pokazuje wszystkie dane i  traktuje to jako 1. film znaleziony później 2 film to dla userscore ten sam a pozniej
+//dla votecount 3 raz i tak dalej, ma traktować każdy single container jako oddzielną rzecz i te 7 danych jest podawane dla jednego containera a nie inaczej.
