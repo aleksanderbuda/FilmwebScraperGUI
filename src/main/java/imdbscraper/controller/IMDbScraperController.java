@@ -48,15 +48,31 @@ public class IMDbScraperController {
             try {
                 IMDbScraper scraper = new IMDbScraper();
                 List<Movie> results = scraper.performSearch(driver, title, releaseDateFrom, releaseDateTo, genre);
+               processSearchResults(results);
 
-                // Process the search results
-//                processSearchResults(results);
             } finally {
                 driver.quit();
             }
         } catch (Exception e) {
             System.err.println("Something bad happened: " + e.getMessage());
             e.printStackTrace();
+        }
+    }
+
+    private void processSearchResults(List<Movie> results) {
+        if (results == null || results.isEmpty()) {
+            System.out.println("No results found.");
+        } else {
+            results.forEach(movie -> {
+                System.out.println("Title: " + movie.getTitle());
+                System.out.println("User Score: " + movie.getUserScore());
+                System.out.println("Vote Count: " + movie.getVoteCount());
+                System.out.println("Description: " + movie.getMovieDescription());
+                System.out.println("Release Year: " + movie.getReleaseYear());
+                System.out.println("Movie Length: " + movie.getMovieLength());
+                System.out.println("Content Rating: " + movie.getContentRating());
+                System.out.println("=======================================");
+            });
         }
     }
 

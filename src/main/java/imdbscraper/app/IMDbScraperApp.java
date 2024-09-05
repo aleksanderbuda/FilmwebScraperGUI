@@ -6,7 +6,10 @@ import imdbscraper.model.IMDbScraper;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+
+
 public class IMDbScraperApp extends Application {
+
     @Override
     public void start(Stage primaryStage) {
         IMDbScraperView view = new IMDbScraperView();
@@ -15,8 +18,4 @@ public class IMDbScraperApp extends Application {
 
         controller.initializeController(primaryStage);
     }
-
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
 }

@@ -1,4 +1,4 @@
-package imdbscraper.setup;
+package imdbscraper.model;
 
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -152,5 +154,13 @@ public class SearchPage {
             case "sci-fi" -> sfGenreButton;
             default -> null;
         };
+    }
+    public WebElement waitForElementToBeClickable(WebDriver driver, WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(Exception.class);
+
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 }

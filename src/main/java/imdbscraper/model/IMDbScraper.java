@@ -1,17 +1,16 @@
 package imdbscraper.model;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import imdbscraper.setup.SearchPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
 public class IMDbScraper {
+    private static final Logger LOGGER = Logger.getLogger(IMDbScraper.class.getName());
+
+    private WebDriver driver;
 
     public List<Movie> performSearch(WebDriver driver, String title, String releaseDateFrom, String releaseDateTo, String genre) {
         SearchPage searchPage = new SearchPage(driver);
@@ -36,23 +35,15 @@ public class IMDbScraper {
             }
 
             searchPage.clickTitlesButton();
-            waitForElementToBeClickable(driver, searchPage.getSeeResultsButton()).click();
+            searchPage.waitForElementToBeClickable(driver, searchPage.getSeeResultsButton()).click();
 
-            // return extractMoviesFromResults(driver);
-            return null;
+            SearchResultPage searchResultPage = new SearchResultPage(driver);
+            searchResultPage.waitForSearchResults();
+            return searchResultPage.getMovies();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, "Error during search operation", e);
             return new ArrayList<>();
         }
-    }
-
-    private WebElement waitForElementToBeClickable(WebDriver driver, WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofSeconds(2))
-                .ignoring(Exception.class);
-
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 }
