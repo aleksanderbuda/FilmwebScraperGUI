@@ -1,6 +1,7 @@
 package imdbscraper.model;
 
 import lombok.Getter;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Getter
 public class SearchPage {
@@ -80,14 +83,17 @@ public class SearchPage {
     @FindBy(xpath = "//li[@class='ipc-tab ipc-tab--on-base ipc-tab--active']")
     private WebElement titlesButton;
 
-    private static WebDriver driver;
+    private static final Logger LOGGER = Logger.getLogger(SearchPage.class.getName());
+
+    private WebDriver driver;
     private final WebDriverWait wait;
     private Actions actions;
 
     public SearchPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.actions = new Actions(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public boolean isCookiesModalPresent() {
@@ -132,7 +138,16 @@ public class SearchPage {
         if (genre != null && !genre.isEmpty()) {
             WebElement genreButton = getGenreButton(genre);
             if (genreButton != null) {
-                actions.moveToElement(genreButton).click().perform();
+                try {
+                    waitForElementToBeClickable(driver, genreButton);
+                actions.moveToElement(genreButton).perform();
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", genreButton);
+
+                } catch (Exception e) {
+                    LOGGER.log(Level.WARNING, "Failed to select genre: " + genre + " - " + e.getMessage());
+                }
+        } else {
+                LOGGER.log(Level.WARNING, "Genre button not found for genre: " + genre);
             }
         }
     }
